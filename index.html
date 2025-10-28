@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Darja Klukhina — Cybersecurity Portfolio</title>
+  <title>Дарья Клюхина — Cybersecurity Portfolio</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto+Mono&display=swap');
     body {
@@ -69,20 +69,19 @@
       text-shadow: 0 0 10px #00ffaa;
     }
 
-    /* Галерея сертификатов */
+    /* Блок сертификатов */
     .cert-gallery {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 15px;
       justify-content: center;
+      margin-top: 20px;
     }
     .cert-item {
-      width: 220px;
       background-color: #001a17;
       border: 1px solid #00ffaa;
-      border-radius: 10px;
-      padding: 10px;
-      text-align: center;
+      border-radius: 8px;
+      padding: 10px 20px;
       cursor: pointer;
       transition: 0.3s;
       box-shadow: 0 0 10px #00ffaa50;
@@ -90,6 +89,7 @@
     .cert-item:hover {
       transform: scale(1.05);
       box-shadow: 0 0 20px #00ffaa;
+      background-color: #002a24;
     }
 
     /* Модальное окно */
@@ -97,19 +97,29 @@
       display: none;
       position: fixed;
       z-index: 10;
-      padding-top: 60px;
       left: 0;
       top: 0;
       width: 100%;
       height: 100%;
       background-color: rgba(0, 0, 0, 0.95);
+      animation: fadeIn 0.4s ease;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
     }
     .modal-content {
-      margin: auto;
+      margin: 5% auto;
       display: block;
       width: 80%;
-      height: 80vh;
+      height: 80%;
       border-radius: 10px;
+      box-shadow: 0 0 25px #00ffaa;
+      animation: zoomIn 0.4s ease;
+    }
+    @keyframes zoomIn {
+      from {transform: scale(0.8);}
+      to {transform: scale(1);}
     }
     .close {
       position: absolute;
@@ -150,7 +160,7 @@
   </ul>
 
   <h2>Инструменты</h2>
-  <p>Linux • Kali Linux • Python • Docker • SQL • IDS/IPS • Sysinternals • PowerShell • Bash • DevSecOps • Gitleaks • Trivy • OWASP ZAP • Bandit</p>
+  <p>Linux • Kali Linux • Python • Docker • SQL • IDS/IPS • Sysinternals • PowerShell • Bash • DevSecOps • Gitleaks • Trivy • OWASP ZAP</p>
 
   <h2>Проекты</h2>
   <ul>
@@ -160,28 +170,28 @@
 
   <h2>🎓 Сертификаты и обучение</h2>
   <div class="cert-gallery">
-    <div class="cert-item" onclick="openModal('certificates/сертификат.pdf')">📜 Сертификат 1</div>
-    <div class="cert-item" onclick="openModal('certificates/сертификат (1).pdf')">📜 Сертификат 2</div>
-    <div class="cert-item" onclick="openModal('certificates/сертификат (2).pdf')">📜 Сертификат 3</div>
-    <div class="cert-item" onclick="openModal('certificates/сертификат (3).pdf')">📜 Сертификат 4</div>
-    <div class="cert-item" onclick="openModal('certificates/сертификат (4).pdf')">📜 Сертификат 5</div>
-    <div class="cert-item" onclick="openModal('certificates/сертификат (5).pdf')">📜 Сертификат 6</div>
-    <div class="cert-item" onclick="openModal('certificates/сертификат (6).pdf')">📜 Сертификат 7</div>
-    <div class="cert-item" onclick="openModal('certificates/сертификат (7).pdf')">📜 Сертификат 8</div>
-    <div class="cert-item" onclick="openModal('certificates/сертификат (8).pdf')">📜 Сертификат 9</div>
-    <div class="cert-item" onclick="openModal('certificates/сертификат (9).pdf')">📜 Сертификат 10</div>
-    <div class="cert-item" onclick="openModal('certificates/Дарья Владимировна Клюхина.pdf')">📜 Дарья Клюхина</div>
+    <div class="cert-item" onclick="openModal('certificates/cert1.pdf')">📜 DevSecOps</div>
+    <div class="cert-item" onclick="openModal('certificates/cert2.pdf')">📜 Kali Linux</div>
+    <div class="cert-item" onclick="openModal('certificates/cert3.pdf')">📜 Docker</div>
+    <div class="cert-item" onclick="openModal('certificates/cert4.pdf')">📜 Python</div>
+    <div class="cert-item" onclick="openModal('certificates/cert5.pdf')">📜 OWASP</div>
+    <div class="cert-item" onclick="openModal('certificates/cert6.pdf')">📜 SQL Security</div>
+    <div class="cert-item" onclick="openModal('certificates/cert7.pdf')">📜 Information Security</div>
+    <div class="cert-item" onclick="openModal('certificates/cert8.pdf')">📜 Network Security</div>
+    <div class="cert-item" onclick="openModal('certificates/cert9.pdf')">📜 Penetration Testing</div>
+    <div class="cert-item" onclick="openModal('certificates/cert10.pdf')">📜 Cybersecurity Foundations</div>
+    <div class="cert-item" onclick="openModal('certificates/F6.pdf')">📜 F6 — Информационная безопасность</div>
   </div>
 
   <div id="modal" class="modal">
     <span class="close" onclick="closeModal()">&times;</span>
-    <iframe class="modal-content" id="modalPDF" frameborder="0"></iframe>
+    <iframe id="modalFrame" class="modal-content" frameborder="0"></iframe>
   </div>
 
   <h2>Контакты</h2>
   <p>📧 Email: <a href="mailto:darja-klukhina@mail.ru">darja-klukhina@mail.ru</a><br>
      💼 GitHub: <a href="https://github.com/KDarja" target="_blank">github.com/KDarja</a><br>
-     🌍 Город: Россия / удалённо</p>
+     🌍 Город: Петрозаводск / удалённо</p>
 </section>
 
 <footer>
@@ -191,13 +201,15 @@
 <script>
 function openModal(pdfPath) {
   const modal = document.getElementById("modal");
-  const modalPDF = document.getElementById("modalPDF");
+  const modalFrame = document.getElementById("modalFrame");
   modal.style.display = "block";
-  modalPDF.src = pdfPath;
+  modalFrame.src = pdfPath;
 }
 function closeModal() {
-  document.getElementById("modal").style.display = "none";
-  document.getElementById("modalPDF").src = "";
+  const modal = document.getElementById("modal");
+  const modalFrame = document.getElementById("modalFrame");
+  modal.style.display = "none";
+  modalFrame.src = "";
 }
 </script>
 
