@@ -71,7 +71,6 @@
       text-shadow: 0 0 10px #00ffaa;
     }
 
-    /* --- Анимация при наведении --- */
     li:hover {
       color: #ffffff;
       text-shadow: 0 0 15px #00ffaa;
@@ -79,28 +78,27 @@
       transition: 0.3s;
     }
 
-    /* --- Галерея сертификатов --- */
+    /* Галерея сертификатов */
     .cert-gallery {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
       justify-content: center;
     }
-    .cert-gallery embed {
+    .cert-gallery img {
       width: 200px;
-      height: 140px;
       border: 1px solid #00ffaa;
       border-radius: 10px;
       cursor: pointer;
       transition: 0.3s;
       box-shadow: 0 0 10px #00ffaa50;
     }
-    .cert-gallery embed:hover {
+    .cert-gallery img:hover {
       transform: scale(1.1);
       box-shadow: 0 0 25px #00ffaa;
     }
 
-    /* --- Модальное окно --- */
+    /* Модалка для PDF */
     .modal {
       display: none;
       position: fixed;
@@ -109,15 +107,15 @@
       top: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.98);
+      background-color: rgba(0,0,0,0.95);
     }
     .modal-content {
       margin: auto;
       display: block;
       width: 90%;
-      height: 95%;
+      height: 90%;
       border-radius: 10px;
-      box-shadow: 0 0 30px #00ffaa;
+      box-shadow: 0 0 25px #00ffaa;
     }
     .close {
       position: absolute;
@@ -126,7 +124,6 @@
       color: #00ffaa;
       font-size: 40px;
       cursor: pointer;
-      transition: 0.3s;
     }
     .close:hover {
       color: #fff;
@@ -187,22 +184,22 @@
 
   <h2>🎓 Сертификаты и обучение</h2>
   <div class="cert-gallery">
-    <embed src="certificates/cert1.pdf" onclick="openModal(this)">
-    <embed src="certificates/cert2.pdf" onclick="openModal(this)">
-    <embed src="certificates/cert3.pdf" onclick="openModal(this)">
-    <embed src="certificates/cert4.pdf" onclick="openModal(this)">
-    <embed src="certificates/cert5.pdf" onclick="openModal(this)">
-    <embed src="certificates/cert6.pdf" onclick="openModal(this)">
-    <embed src="certificates/cert7.pdf" onclick="openModal(this)">
-    <embed src="certificates/cert8.pdf" onclick="openModal(this)">
-    <embed src="certificates/cert9.pdf" onclick="openModal(this)">
-    <embed src="certificates/cert10.pdf" onclick="openModal(this)">
-    <embed src="certificates/F6.pdf" onclick="openModal(this)">
+    <img src="certificates/cert1.pdf" alt="cert1" onclick="openModal('certificates/cert1.pdf')">
+    <img src="certificates/cert2.pdf" alt="cert2" onclick="openModal('certificates/cert2.pdf')">
+    <img src="certificates/cert3.pdf" alt="cert3" onclick="openModal('certificates/cert3.pdf')">
+    <img src="certificates/cert4.pdf" alt="cert4" onclick="openModal('certificates/cert4.pdf')">
+    <img src="certificates/cert5.pdf" alt="cert5" onclick="openModal('certificates/cert5.pdf')">
+    <img src="certificates/cert6.pdf" alt="cert6" onclick="openModal('certificates/cert6.pdf')">
+    <img src="certificates/cert7.pdf" alt="cert7" onclick="openModal('certificates/cert7.pdf')">
+    <img src="certificates/cert8.pdf" alt="cert8" onclick="openModal('certificates/cert8.pdf')">
+    <img src="certificates/cert9.pdf" alt="cert9" onclick="openModal('certificates/cert9.pdf')">
+    <img src="certificates/cert10.pdf" alt="cert10" onclick="openModal('certificates/cert10.pdf')">
+    <img src="certificates/F6.pdf" alt="F6" onclick="openModal('certificates/F6.pdf')">
   </div>
 
   <div id="modal" class="modal">
     <span class="close" onclick="closeModal()">&times;</span>
-    <embed class="modal-content" id="modalImg" type="application/pdf">
+    <iframe class="modal-content" id="pdfViewer"></iframe>
   </div>
 
   <h2>Контакты</h2>
@@ -216,17 +213,17 @@
 </footer>
 
 <script>
-function openModal(embed) {
+function openModal(pdfPath) {
   const modal = document.getElementById("modal");
-  const modalImg = document.getElementById("modalImg");
+  const viewer = document.getElementById("pdfViewer");
   modal.style.display = "block";
-  modalImg.src = embed.src;
+  viewer.src = pdfPath;
 }
 function closeModal() {
   document.getElementById("modal").style.display = "none";
+  document.getElementById("pdfViewer").src = "";
 }
 </script>
 
 </body>
 </html>
-
