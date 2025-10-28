@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Дарья Клюхина — Cybersecurity Portfolio</title>
+  <title>Darja Klukhina — Cybersecurity Portfolio</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto+Mono&display=swap');
     body {
@@ -69,27 +69,25 @@
       text-shadow: 0 0 10px #00ffaa;
     }
 
-    /* Блок сертификатов */
+    /* Галерея сертификатов */
     .cert-gallery {
       display: flex;
       flex-wrap: wrap;
-      gap: 15px;
+      gap: 20px;
       justify-content: center;
-      margin-top: 20px;
     }
-    .cert-item {
-      background-color: #001a17;
+    .cert-gallery embed {
+      width: 200px;
+      height: 140px;
       border: 1px solid #00ffaa;
-      border-radius: 8px;
-      padding: 10px 20px;
+      border-radius: 10px;
       cursor: pointer;
       transition: 0.3s;
       box-shadow: 0 0 10px #00ffaa50;
     }
-    .cert-item:hover {
+    .cert-gallery embed:hover {
       transform: scale(1.05);
       box-shadow: 0 0 20px #00ffaa;
-      background-color: #002a24;
     }
 
     /* Модальное окно */
@@ -97,29 +95,20 @@
       display: none;
       position: fixed;
       z-index: 10;
+      padding-top: 60px;
       left: 0;
       top: 0;
       width: 100%;
       height: 100%;
+      overflow: auto;
       background-color: rgba(0, 0, 0, 0.95);
-      animation: fadeIn 0.4s ease;
-    }
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
     }
     .modal-content {
-      margin: 5% auto;
+      margin: auto;
       display: block;
-      width: 80%;
-      height: 80%;
+      max-width: 80%;
+      height: 90vh;
       border-radius: 10px;
-      box-shadow: 0 0 25px #00ffaa;
-      animation: zoomIn 0.4s ease;
-    }
-    @keyframes zoomIn {
-      from {transform: scale(0.8);}
-      to {transform: scale(1);}
     }
     .close {
       position: absolute;
@@ -168,30 +157,44 @@
     <a href="https://github.com/KDarja/flaskr-ci-cd" target="_blank">🔗 Репозиторий проекта на GitHub</a></li>
   </ul>
 
+  <h2>📘 Учебные проекты</h2>
+  <ul>
+    <li><strong>Итоговая работа по модулю «Веб-приложения»</strong> — <a href="https://docs.google.com/document/d/13xlpuTkD2xUR1ge2N0qnNDnR0eusLGn7l6c7_OJChZs/edit?usp=sharing" target="_blank">Посмотреть работу</a></li>
+    <li><strong>Первичный пентест уязвимого приложения Google Gruyere</strong> — <a href="https://docs.google.com/document/d/1UZO35AfIUSh5PCRBHUoyEctJlqC7aMAodldtV24NUi4/edit?usp=sharing" target="_blank">Посмотреть работу</a></li>
+    <li><strong>Тестирование на проникновение</strong> — <a href="https://docs.google.com/document/d/1iNVIbPiJIFx82aPWl7uEQ_q-U8GPQSkYwcdzUfi3yeo/edit?usp=sharing" target="_blank">Посмотреть работу</a></li>
+    <li><strong>Мониторинг сетевых событий (Suricata)</strong> — <a href="https://docs.google.com/document/d/1X5rqJMvuNFV1Ywz4Rl7_60vSzTbcFaOOyrsQdf85jy0/edit?usp=sharing" target="_blank">Посмотреть работу</a></li>
+    <li><strong>Диагностика Active Directory с DCDIAG</strong> — <a href="https://docs.google.com/document/d/1V9SRDjKd5-Z0n0gYsZ-uUOzKjkAiFW9ZSoch7QosAso/edit?usp=sharing" target="_blank">Посмотреть работу</a></li>
+    <li><strong>OWASP Web. Часть 1</strong> — <a href="https://docs.google.com/document/d/1ryEnn-8I69qZQ94mqv5eGgBStZZdLOVY_PRWCcz9Bec/edit?usp=sharing" target="_blank">Посмотреть работу</a></li>
+    <li><strong>OWASP Web. Часть 2</strong> — <a href="https://docs.google.com/document/d/1crr9yhemYJXOaaPaOAQt5Oc_MEIYiDEQo7JQtAfPXcw/edit?usp=sharing" target="_blank">Посмотреть работу</a></li>
+    <li><strong>Итоговая работа по модулю «Безопасность ОС и системное программирование»</strong> — <a href="https://docs.google.com/document/d/1jPih6P-0sEJx6Y3dQUfVtfDReZ6tYvz4zPG0jscoKLM/edit?usp=sharing" target="_blank">Посмотреть работу</a></li>
+    <li><strong>Дипломное задание по профессии “Специалист по информационной безопасности”</strong> — <a href="https://docs.google.com/document/d/1SA40ViZbg8AUDUah5juczCyeNPbZXw0lH4H83Bir7nM/edit?usp=sharing" target="_blank">Посмотреть диплом</a></li>
+    <li><strong>Контейнеризация (Docker)</strong> — <a href="https://docs.google.com/document/d/1RN61yRW-QZdSrglxt6kzKAr1_xVlzghlWNmbz5UkdZQ/edit?usp=sharing" target="_blank">Посмотреть работу</a></li>
+  </ul>
+
   <h2>🎓 Сертификаты и обучение</h2>
   <div class="cert-gallery">
-    <div class="cert-item" onclick="openModal('certificates/cert1.pdf')">📜 Основы информационной безопасности</div>
-    <div class="cert-item" onclick="openModal('certificates/cert2.pdf')">📜 Сети передачи данных и безопасность</div>
-    <div class="cert-item" onclick="openModal('certificates/cert3.pdf')">📜 Git — система контроля версий в ИБ</div>
-    <div class="cert-item" onclick="openModal('certificates/cert4.pdf')">📜 Безопасность ОС и системное программирование</div>
-    <div class="cert-item" onclick="openModal('certificates/cert5.pdf')">📜 Современная разработка ПО</div>
-    <div class="cert-item" onclick="openModal('certificates/cert6.pdf')">📜 Безопасность веб-приложений</div>
-    <div class="cert-item" onclick="openModal('certificates/cert7.pdf')">📜 Attack & Defence</div>
-    <div class="cert-item" onclick="openModal('certificates/cert8.pdf')">📜 Киберпреступность и методы противодействия</div>
-    <div class="cert-item" onclick="openModal('certificates/cert9.pdf')">📜 Реагирование на инциденты и Threat Hunting</div>
-    <div class="cert-item" onclick="openModal('certificates/cert10.pdf')">📜 Специалист по информационной безопасности (расширенный курс)</div>
-    <div class="cert-item" onclick="openModal('certificates/F6.pdf')">📜 F6 — Информационная безопасность</div>
+    <embed src="certificates/cert1.pdf" onclick="openModal(this)">
+    <embed src="certificates/cert2.pdf" onclick="openModal(this)">
+    <embed src="certificates/cert3.pdf" onclick="openModal(this)">
+    <embed src="certificates/cert4.pdf" onclick="openModal(this)">
+    <embed src="certificates/cert5.pdf" onclick="openModal(this)">
+    <embed src="certificates/cert6.pdf" onclick="openModal(this)">
+    <embed src="certificates/cert7.pdf" onclick="openModal(this)">
+    <embed src="certificates/cert8.pdf" onclick="openModal(this)">
+    <embed src="certificates/cert9.pdf" onclick="openModal(this)">
+    <embed src="certificates/cert10.pdf" onclick="openModal(this)">
+    <embed src="certificates/F6.pdf" onclick="openModal(this)">
   </div>
 
   <div id="modal" class="modal">
     <span class="close" onclick="closeModal()">&times;</span>
-    <iframe id="modalFrame" class="modal-content" frameborder="0"></iframe>
+    <embed class="modal-content" id="modalImg" type="application/pdf">
   </div>
 
   <h2>Контакты</h2>
   <p>📧 Email: <a href="mailto:darja-klukhina@mail.ru">darja-klukhina@mail.ru</a><br>
      💼 GitHub: <a href="https://github.com/KDarja" target="_blank">github.com/KDarja</a><br>
-     🌍 Город: Петрозаводск / удалённо</p>
+     🌍 Город: Россия / удалённо</p>
 </section>
 
 <footer>
@@ -199,17 +202,14 @@
 </footer>
 
 <script>
-function openModal(pdfPath) {
+function openModal(embed) {
   const modal = document.getElementById("modal");
-  const modalFrame = document.getElementById("modalFrame");
+  const modalImg = document.getElementById("modalImg");
   modal.style.display = "block";
-  modalFrame.src = pdfPath;
+  modalImg.src = embed.src;
 }
 function closeModal() {
-  const modal = document.getElementById("modal");
-  const modalFrame = document.getElementById("modalFrame");
-  modal.style.display = "none";
-  modalFrame.src = "";
+  document.getElementById("modal").style.display = "none";
 }
 </script>
 
