@@ -70,7 +70,6 @@
       color: #fff;
       text-shadow: 0 0 10px #00ffaa;
     }
-
     li:hover {
       color: #ffffff;
       text-shadow: 0 0 15px #00ffaa;
@@ -85,6 +84,11 @@
       gap: 20px;
       justify-content: center;
     }
+    .cert-item {
+      text-align: center;
+      color: #00ffaa;
+      width: 200px;
+    }
     .cert-gallery img {
       width: 200px;
       border: 1px solid #00ffaa;
@@ -97,8 +101,12 @@
       transform: scale(1.1);
       box-shadow: 0 0 25px #00ffaa;
     }
+    .cert-title {
+      margin-top: 8px;
+      font-size: 0.9em;
+    }
 
-    /* Модалка для PDF */
+    /* Модалка PDF */
     .modal {
       display: none;
       position: fixed;
@@ -162,39 +170,33 @@
   <h2>Инструменты</h2>
   <p>Linux • Kali Linux • Python • Docker • SQL • IDS/IPS • Sysinternals • PowerShell • Bash • DevSecOps • Gitleaks • Trivy • OWASP ZAP</p>
 
-  <h2>Проекты</h2>
-  <ul>
-    <li><strong>Flaskr CI/CD DevSecOps</strong> — дипломный проект с интеграцией Trivy, Gitleaks, Bandit и OWASP ZAP<br>
-    <a href="https://github.com/KDarja/flaskr-ci-cd" target="_blank">🔗 Репозиторий проекта на GitHub</a></li>
-  </ul>
-
   <h2>📘 Учебные проекты</h2>
   <ul>
     <li><strong>Итоговая работа по модулю «Веб-приложения»</strong> — <a href="https://docs.google.com/document/d/13xlpuTkD2xUR1ge2N0qnNDnR0eusLGn7l6c7_OJChZs/edit?usp=sharing" target="_blank">Посмотреть</a></li>
     <li><strong>Пентест Google Gruyere (OWASP ZAP)</strong> — <a href="https://docs.google.com/document/d/1UZO35AfIUSh5PCRBHUoyEctJlqC7aMAodldtV24NUi4/edit?usp=sharing" target="_blank">Посмотреть</a></li>
     <li><strong>Тестирование на проникновение</strong> — <a href="https://docs.google.com/document/d/1iNVIbPiJIFx82aPWl7uEQ_q-U8GPQSkYwcdzUfi3yeo/edit?usp=sharing" target="_blank">Посмотреть</a></li>
     <li><strong>Мониторинг сетевых событий (Suricata)</strong> — <a href="https://docs.google.com/document/d/1X5rqJMvuNFV1Ywz4Rl7_60vSzTbcFaOOyrsQdf85jy0/edit?usp=sharing" target="_blank">Посмотреть</a></li>
-    <li><strong>Диагностика Active Directory (dcdiag)</strong> — <a href="https://docs.google.com/document/d/1V9SRDjKd5-Z0n0gYsZ-uUOzKjkAiFW9ZSoch7QosAso/edit?usp=sharing" target="_blank">Посмотреть</a></li>
+    <li><strong>Диагностика Active Directory (dcdiag)</strong> — <a href="https://docs.google.com/document/d/1V9SRDjKd5-Z0n0gYsЗ-uUOzKjkAiFW9ZSoch7QosAso/edit?usp=sharing" target="_blank">Посмотреть</a></li>
     <li><strong>OWASP Web. Часть 1</strong> — <a href="https://docs.google.com/document/d/1ryEnn-8I69qZQ94mqv5eGgBStZZdLOVY_PRWCcz9Bec/edit?usp=sharing" target="_blank">Посмотреть</a></li>
     <li><strong>OWASP Web. Часть 2</strong> — <a href="https://docs.google.com/document/d/1crr9yhemYJXOaaPaOAQt5Oc_MEIYiDEQo7JQtAfPXcw/edit?usp=sharing" target="_blank">Посмотреть</a></li>
     <li><strong>Безопасность ОС и системное программирование</strong> — <a href="https://docs.google.com/document/d/1jPih6P-0sEJx6Y3dQUfVtfDReZ6tYvz4zPG0jscoKLM/edit?usp=sharing" target="_blank">Посмотреть</a></li>
-    <li><strong>Диплом: Специалист по информационной безопасности (DevSecOps)</strong> — <a href="https://docs.google.com/document/d/1SA40ViZbg8AUDUah5juczCyeNPbZXw0lH4H83Bir7nM/edit?usp=sharing" target="_blank">Посмотреть</a></li>
+    <li><strong>Диплом: Специалист по ИБ (DevSecOps)</strong> — <a href="https://docs.google.com/document/d/1SA40ViZbg8AUDUah5juczCyeNPbZXw0lH4H83Bir7nM/edit?usp=sharing" target="_blank">Посмотреть</a></li>
     <li><strong>Контейнеризация (Docker)</strong> — <a href="https://docs.google.com/document/d/1RN61yRW-QZdSrglxt6kzKAr1_xVlzghlWNmbz5UkdZQ/edit?usp=sharing" target="_blank">Посмотреть</a></li>
   </ul>
 
   <h2>🎓 Сертификаты и обучение</h2>
   <div class="cert-gallery">
-    <img src="certificates/cert1.pdf" alt="cert1" onclick="openModal('certificates/cert1.pdf')">
-    <img src="certificates/cert2.pdf" alt="cert2" onclick="openModal('certificates/cert2.pdf')">
-    <img src="certificates/cert3.pdf" alt="cert3" onclick="openModal('certificates/cert3.pdf')">
-    <img src="certificates/cert4.pdf" alt="cert4" onclick="openModal('certificates/cert4.pdf')">
-    <img src="certificates/cert5.pdf" alt="cert5" onclick="openModal('certificates/cert5.pdf')">
-    <img src="certificates/cert6.pdf" alt="cert6" onclick="openModal('certificates/cert6.pdf')">
-    <img src="certificates/cert7.pdf" alt="cert7" onclick="openModal('certificates/cert7.pdf')">
-    <img src="certificates/cert8.pdf" alt="cert8" onclick="openModal('certificates/cert8.pdf')">
-    <img src="certificates/cert9.pdf" alt="cert9" onclick="openModal('certificates/cert9.pdf')">
-    <img src="certificates/cert10.pdf" alt="cert10" onclick="openModal('certificates/cert10.pdf')">
-    <img src="certificates/F6.pdf" alt="F6" onclick="openModal('certificates/F6.pdf')">
+    <div class="cert-item"><img src="certificates/cert1.pdf" onclick="openModal('certificates/cert1.pdf')"><div class="cert-title">Основы информационной безопасности</div></div>
+    <div class="cert-item"><img src="certificates/cert2.pdf" onclick="openModal('certificates/cert2.pdf')"><div class="cert-title">Сети передачи данных и безопасность</div></div>
+    <div class="cert-item"><img src="certificates/cert3.pdf" onclick="openModal('certificates/cert3.pdf')"><div class="cert-title">Git — система контроля версий</div></div>
+    <div class="cert-item"><img src="certificates/cert4.pdf" onclick="openModal('certificates/cert4.pdf')"><div class="cert-title">Безопасность операционных систем</div></div>
+    <div class="cert-item"><img src="certificates/cert5.pdf" onclick="openModal('certificates/cert5.pdf')"><div class="cert-title">Современная разработка ПО</div></div>
+    <div class="cert-item"><img src="certificates/cert6.pdf" onclick="openModal('certificates/cert6.pdf')"><div class="cert-title">Веб-приложения</div></div>
+    <div class="cert-item"><img src="certificates/cert7.pdf" onclick="openModal('certificates/cert7.pdf')"><div class="cert-title">Attack & Defence</div></div>
+    <div class="cert-item"><img src="certificates/cert8.pdf" onclick="openModal('certificates/cert8.pdf')"><div class="cert-title">Киберпреступность и противодействие</div></div>
+    <div class="cert-item"><img src="certificates/cert9.pdf" onclick="openModal('certificates/cert9.pdf')"><div class="cert-title">Реагирование на инциденты ИБ</div></div>
+    <div class="cert-item"><img src="certificates/cert10.pdf" onclick="openModal('certificates/cert10.pdf')"><div class="cert-title">Специалист по ИБ — расширенный курс</div></div>
+    <div class="cert-item"><img src="certificates/F6.pdf" onclick="openModal('certificates/F6.pdf')"><div class="cert-title">Информационная безопасность (F6)</div></div>
   </div>
 
   <div id="modal" class="modal">
