@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Darja Klukhina — Cybersecurity Specialist</title>
+  <title>Darja Klukhina — Cybersecurity Portfolio</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto+Mono&display=swap');
     body {
@@ -68,6 +68,54 @@
       color: #fff;
       text-shadow: 0 0 10px #00ffaa;
     }
+
+    /* Галерея сертификатов */
+    .cert-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .cert-gallery img {
+      width: 200px;
+      border: 1px solid #00ffaa;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #00ffaa50;
+    }
+    .cert-gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00ffaa;
+    }
+
+    /* Модальное окно */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.95);
+    }
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 80%;
+      border-radius: 10px;
+    }
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      color: #00ffaa;
+      font-size: 35px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -86,8 +134,7 @@
 
 <section>
   <h2>Обо мне</h2>
-  <p>Я специалист по информационной безопасности с фокусом на DevSecOps, тестирование безопасности и автоматизацию CI/CD процессов. 
-     Работаю с инструментами анализа уязвимостей, контейнеризацией и мониторингом безопасности приложений.</p>
+  <p>Я специалист по информационной безопасности с фокусом на DevSecOps, тестирование безопасности и автоматизацию CI/CD процессов. Работаю с инструментами анализа уязвимостей, контейнеризацией и мониторингом безопасности приложений.</p>
 
   <h2>Ключевые навыки</h2>
   <ul>
@@ -108,8 +155,24 @@
     <a href="https://github.com/KDarja/flaskr-ci-cd" target="_blank">🔗 Репозиторий проекта на GitHub</a></li>
   </ul>
 
+  <h2>🎓 Сертификаты и обучение</h2>
+  <div class="cert-gallery">
+    <img src="certificates/devsecops.jpg" alt="DevSecOps Certificate" onclick="openModal(this)">
+    <img src="certificates/kali.jpg" alt="Kali Linux Certificate" onclick="openModal(this)">
+    <img src="certificates/docker.jpg" alt="Docker Certificate" onclick="openModal(this)">
+    <img src="certificates/python.jpg" alt="Python Certificate" onclick="openModal(this)">
+    <img src="certificates/owasp.jpg" alt="OWASP Certificate" onclick="openModal(this)">
+    <img src="certificates/sql.jpg" alt="SQL Certificate" onclick="openModal(this)">
+    <img src="certificates/security.jpg" alt="Security Certificate" onclick="openModal(this)">
+  </div>
+
+  <div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
+
   <h2>Контакты</h2>
-  <p>📧 Email: <a href="mailto:your.email@example.com">your.email@example.com</a><br>
+  <p>📧 Email: <a href="mailto:darja-klukhina@mail.ru">darja-klukhina@mail.ru</a><br>
      💼 GitHub: <a href="https://github.com/KDarja" target="_blank">github.com/KDarja</a><br>
      🌍 Город: Россия / удалённо</p>
 </section>
@@ -117,6 +180,18 @@
 <footer>
   <p>© 2025 Darja Klukhina | Cybersecurity Portfolio</p>
 </footer>
+
+<script>
+function openModal(img) {
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modalImg");
+  modal.style.display = "block";
+  modalImg.src = img.src;
+}
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
 
 </body>
 </html>
