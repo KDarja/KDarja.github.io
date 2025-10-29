@@ -70,12 +70,6 @@
       color: #fff;
       text-shadow: 0 0 10px #00ffaa;
     }
-    li:hover {
-      color: #ffffff;
-      text-shadow: 0 0 15px #00ffaa;
-      transform: scale(1.01);
-      transition: 0.3s;
-    }
 
     /* Галерея сертификатов */
     .cert-gallery {
@@ -88,17 +82,24 @@
       text-align: center;
       color: #00ffaa;
       width: 200px;
+      transition: 0.3s;
+    }
+    .cert-item:hover {
+      transform: scale(1.05);
+      text-shadow: 0 0 15px #00ffaa;
     }
     .cert-gallery img {
       width: 200px;
+      height: 140px;
+      object-fit: contain;
       border: 1px solid #00ffaa;
       border-radius: 10px;
       cursor: pointer;
       transition: 0.3s;
+      background-color: #001a17;
       box-shadow: 0 0 10px #00ffaa50;
     }
     .cert-gallery img:hover {
-      transform: scale(1.1);
       box-shadow: 0 0 25px #00ffaa;
     }
     .cert-title {
@@ -154,49 +155,19 @@
 </header>
 
 <section>
-  <h2>Обо мне</h2>
-  <p>Я специалист по информационной безопасности с фокусом на DevSecOps, тестирование безопасности и автоматизацию CI/CD процессов. Работаю с инструментами анализа уязвимостей, контейнеризацией и мониторингом безопасности приложений.</p>
-
-  <h2>Ключевые навыки</h2>
-  <ul>
-    <li>Построение системы информационной безопасности</li>
-    <li>Аудит ИС и анализ инцидентов</li>
-    <li>DevSecOps и автоматизация безопасности (CI/CD)</li>
-    <li>Тестирование безопасности: SAST, DAST, Security Gateway</li>
-    <li>Работа с Linux, Kali, Bash, Docker</li>
-    <li>Python для автоматизации и тестов безопасности</li>
-  </ul>
-
-  <h2>Инструменты</h2>
-  <p>Linux • Kali Linux • Python • Docker • SQL • IDS/IPS • Sysinternals • PowerShell • Bash • DevSecOps • Gitleaks • Trivy • OWASP ZAP</p>
-
-  <h2>📘 Учебные проекты</h2>
-  <ul>
-    <li><strong>Итоговая работа по модулю «Веб-приложения»</strong> — <a href="https://docs.google.com/document/d/13xlpuTkD2xUR1ge2N0qnNDnR0eusLGn7l6c7_OJChZs/edit?usp=sharing" target="_blank">Посмотреть</a></li>
-    <li><strong>Пентест Google Gruyere (OWASP ZAP)</strong> — <a href="https://docs.google.com/document/d/1UZO35AfIUSh5PCRBHUoyEctJlqC7aMAodldtV24NUi4/edit?usp=sharing" target="_blank">Посмотреть</a></li>
-    <li><strong>Тестирование на проникновение</strong> — <a href="https://docs.google.com/document/d/1iNVIbPiJIFx82aPWl7uEQ_q-U8GPQSkYwcdzUfi3yeo/edit?usp=sharing" target="_blank">Посмотреть</a></li>
-    <li><strong>Мониторинг сетевых событий (Suricata)</strong> — <a href="https://docs.google.com/document/d/1X5rqJMvuNFV1Ywz4Rl7_60vSzTbcFaOOyrsQdf85jy0/edit?usp=sharing" target="_blank">Посмотреть</a></li>
-    <li><strong>Диагностика Active Directory (dcdiag)</strong> — <a href="https://docs.google.com/document/d/1V9SRDjKd5-Z0n0gYsЗ-uUOzKjkAiFW9ZSoch7QosAso/edit?usp=sharing" target="_blank">Посмотреть</a></li>
-    <li><strong>OWASP Web. Часть 1</strong> — <a href="https://docs.google.com/document/d/1ryEnn-8I69qZQ94mqv5eGgBStZZdLOVY_PRWCcz9Bec/edit?usp=sharing" target="_blank">Посмотреть</a></li>
-    <li><strong>OWASP Web. Часть 2</strong> — <a href="https://docs.google.com/document/d/1crr9yhemYJXOaaPaOAQt5Oc_MEIYiDEQo7JQtAfPXcw/edit?usp=sharing" target="_blank">Посмотреть</a></li>
-    <li><strong>Безопасность ОС и системное программирование</strong> — <a href="https://docs.google.com/document/d/1jPih6P-0sEJx6Y3dQUfVtfDReZ6tYvz4zPG0jscoKLM/edit?usp=sharing" target="_blank">Посмотреть</a></li>
-    <li><strong>Диплом: Специалист по ИБ (DevSecOps)</strong> — <a href="https://docs.google.com/document/d/1SA40ViZbg8AUDUah5juczCyeNPbZXw0lH4H83Bir7nM/edit?usp=sharing" target="_blank">Посмотреть</a></li>
-    <li><strong>Контейнеризация (Docker)</strong> — <a href="https://docs.google.com/document/d/1RN61yRW-QZdSrglxt6kzKAr1_xVlzghlWNmbz5UkdZQ/edit?usp=sharing" target="_blank">Посмотреть</a></li>
-  </ul>
-
   <h2>🎓 Сертификаты и обучение</h2>
   <div class="cert-gallery">
-    <div class="cert-item"><img src="certificates/cert1.pdf" onclick="openModal('certificates/cert1.pdf')"><div class="cert-title">Основы информационной безопасности</div></div>
-    <div class="cert-item"><img src="certificates/cert2.pdf" onclick="openModal('certificates/cert2.pdf')"><div class="cert-title">Сети передачи данных и безопасность</div></div>
-    <div class="cert-item"><img src="certificates/cert3.pdf" onclick="openModal('certificates/cert3.pdf')"><div class="cert-title">Git — система контроля версий</div></div>
-    <div class="cert-item"><img src="certificates/cert4.pdf" onclick="openModal('certificates/cert4.pdf')"><div class="cert-title">Безопасность операционных систем</div></div>
-    <div class="cert-item"><img src="certificates/cert5.pdf" onclick="openModal('certificates/cert5.pdf')"><div class="cert-title">Современная разработка ПО</div></div>
-    <div class="cert-item"><img src="certificates/cert6.pdf" onclick="openModal('certificates/cert6.pdf')"><div class="cert-title">Веб-приложения</div></div>
-    <div class="cert-item"><img src="certificates/cert7.pdf" onclick="openModal('certificates/cert7.pdf')"><div class="cert-title">Attack & Defence</div></div>
-    <div class="cert-item"><img src="certificates/cert8.pdf" onclick="openModal('certificates/cert8.pdf')"><div class="cert-title">Киберпреступность и противодействие</div></div>
-    <div class="cert-item"><img src="certificates/cert9.pdf" onclick="openModal('certificates/cert9.pdf')"><div class="cert-title">Реагирование на инциденты ИБ</div></div>
-    <div class="cert-item"><img src="certificates/cert10.pdf" onclick="openModal('certificates/cert10.pdf')"><div class="cert-title">Специалист по ИБ — расширенный курс</div></div>
-    <div class="cert-item"><img src="certificates/F6.pdf" onclick="openModal('certificates/F6.pdf')"><div class="cert-title">Информационная безопасность (F6)</div></div>
+    <div class="cert-item"><img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" onclick="openModal('certificates/cert1.pdf')"><div class="cert-title">Основы информационной безопасности</div></div>
+    <div class="cert-item"><img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" onclick="openModal('certificates/cert2.pdf')"><div class="cert-title">Сети передачи данных и безопасность</div></div>
+    <div class="cert-item"><img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" onclick="openModal('certificates/cert3.pdf')"><div class="cert-title">Git — система контроля версий</div></div>
+    <div class="cert-item"><img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" onclick="openModal('certificates/cert4.pdf')"><div class="cert-title">Безопасность операционных систем</div></div>
+    <div class="cert-item"><img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" onclick="openModal('certificates/cert5.pdf')"><div class="cert-title">Современная разработка ПО</div></div>
+    <div class="cert-item"><img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" onclick="openModal('certificates/cert6.pdf')"><div class="cert-title">Веб-приложения</div></div>
+    <div class="cert-item"><img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" onclick="openModal('certificates/cert7.pdf')"><div class="cert-title">Attack & Defence</div></div>
+    <div class="cert-item"><img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" onclick="openModal('certificates/cert8.pdf')"><div class="cert-title">Киберпреступность и противодействие</div></div>
+    <div class="cert-item"><img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" onclick="openModal('certificates/cert9.pdf')"><div class="cert-title">Реагирование на инциденты ИБ</div></div>
+    <div class="cert-item"><img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" onclick="openModal('certificates/cert10.pdf')"><div class="cert-title">Специалист по ИБ — расширенный курс</div></div>
+    <div class="cert-item"><img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" onclick="openModal('certificates/F6.pdf')"><div class="cert-title">Информационная безопасность (F6)</div></div>
   </div>
 
   <div id="modal" class="modal">
