@@ -72,7 +72,7 @@
       text-shadow: 0 0 10px #00ffaa;
     }
 
-    /* Галерея сертификатов */
+    /* --- Сертификаты --- */
     .cert-gallery {
       display: flex;
       flex-wrap: wrap;
@@ -107,7 +107,7 @@
       font-size: 0.9em;
     }
 
-    /* Модалка PDF */
+    /* --- Модалка PDF --- */
     .modal {
       display: none;
       position: fixed;
@@ -134,6 +134,18 @@
       font-size: 40px;
       cursor: pointer;
     }
+
+    /* --- Эффект наведения на проекты --- */
+    .project-item {
+      padding: 10px;
+      border-left: 3px solid transparent;
+      transition: 0.3s;
+    }
+    .project-item:hover {
+      background-color: rgba(0,255,170,0.05);
+      border-left: 3px solid #00ffaa;
+      text-shadow: 0 0 10px #00ffaa;
+    }
   </style>
 </head>
 <body>
@@ -151,6 +163,40 @@
 </header>
 
 <section>
+  <h2>Обо мне</h2>
+  <p>Я специалист по информационной безопасности с фокусом на DevSecOps, тестирование безопасности и автоматизацию CI/CD процессов. Работаю с инструментами анализа уязвимостей, контейнеризацией и мониторингом безопасности приложений.</p>
+
+  <h2>Ключевые навыки</h2>
+  <ul>
+    <li>Построение системы информационной безопасности</li>
+    <li>Аудит ИС и анализ инцидентов</li>
+    <li>DevSecOps и автоматизация безопасности (CI/CD)</li>
+    <li>Тестирование безопасности: SAST, DAST, Security Gateway</li>
+    <li>Работа с Linux, Kali, Bash, Docker</li>
+    <li>Python для автоматизации и тестов безопасности</li>
+  </ul>
+
+  <h2>Инструменты</h2>
+  <p>Linux • Kali Linux • Python • Docker • SQL • IDS/IPS • Sysinternals • PowerShell • Bash • DevSecOps • Gitleaks • Trivy • OWASP ZAP</p>
+
+  <h2>Проекты</h2>
+  <div class="project-item">
+    <strong>Flaskr CI/CD DevSecOps</strong> — дипломный проект с интеграцией Trivy, Gitleaks, Bandit и OWASP ZAP<br>
+    <a href="https://github.com/KDarja/flaskr-ci-cd" target="_blank">🔗 Репозиторий проекта на GitHub</a>
+  </div>
+
+  <h2>Учебные проекты</h2>
+  <div class="project-item"><a href="https://docs.google.com/document/d/13xlpuTkD2xUR1ge2N0qnNDnR0eusLGn7l6c7_OJChZs/edit?tab=t.0" target="_blank">Итоговая работа по модулю «Веб-приложения»</a></div>
+  <div class="project-item"><a href="https://docs.google.com/document/d/1UZO35AfIUSh5PCRBHUoyEctJlqC7aMAodldtV24NUi4/edit?tab=t.0" target="_blank">Пентест уязвимого приложения Google Gruyere (OWASP ZAP / Burp Suite)</a></div>
+  <div class="project-item"><a href="https://docs.google.com/document/d/1iNVIbPiJIFx82aPWl7uEQ_q-U8GPQSkYwcdzUfi3yeo/edit?tab=t.0" target="_blank">Тестирование на проникновение</a></div>
+  <div class="project-item"><a href="https://docs.google.com/document/d/1X5rqJMvuNFV1Ywz4Rl7_60vSzTbcFaOOyrsQdf85jy0/edit?tab=t.0" target="_blank">Мониторинг сетевых событий (Suricata)</a></div>
+  <div class="project-item"><a href="https://docs.google.com/document/d/1V9SRDjKd5-Z0n0gYsZ-uUOzKjkAiFW9ZSoch7QosAso/edit?tab=t.0" target="_blank">Диагностика Active Directory с помощью dcdiag</a></div>
+  <div class="project-item"><a href="https://docs.google.com/document/d/1ryEnn-8I69qZQ94mqv5eGgBStZZdLOVY_PRWCcz9Bec/edit?tab=t.0" target="_blank">OWASP Web. Часть 1</a></div>
+  <div class="project-item"><a href="https://docs.google.com/document/d/1crr9yhemYJXOaaPaOAQt5Oc_MEIYiDEQo7JQtAfPXcw/edit?tab=t.0" target="_blank">OWASP Web. Часть 2</a></div>
+  <div class="project-item"><a href="https://docs.google.com/document/d/1jPih6P-0sEJx6Y3dQUfVtfDReZ6tYvz4zPG0jscoKLM/edit?tab=t.0" target="_blank">Итоговая работа по модулю «Безопасность ОС и системное программирование»</a></div>
+  <div class="project-item"><a href="https://docs.google.com/document/d/1SA40ViZbg8AUDUah5juczCyeNPbZXw0lH4H83Bir7nM/edit?tab=t.0" target="_blank">Дипломная работа: DevSecOps-практики в CI/CD</a></div>
+  <div class="project-item"><a href="https://docs.google.com/document/d/1RN61yRW-QZdSrglxt6kzKAr1_xVlzghlWNmbz5UkdZQ/edit?tab=t.0" target="_blank">Контейнеризация (Docker)</a></div>
+
   <h2>🎓 Сертификаты и обучение</h2>
   <div class="cert-gallery">
     <div class="cert-item"><img src="certificates/cert1.jpg" onclick="openModal('certificates/cert1.pdf')"><div class="cert-title">Основы информационной безопасности</div></div>
