@@ -34,7 +34,7 @@
       margin-top: 40px;
     }
     section {
-      max-width: 900px;
+      max-width: 950px;
       margin: 0 auto;
       padding: 20px;
       line-height: 1.6;
@@ -60,6 +60,7 @@
       margin: 10px;
       filter: drop-shadow(0 0 6px #00ffcc);
     }
+
     a {
       color: #00ffcc;
       text-decoration: none;
@@ -81,7 +82,7 @@
     .cert-item {
       text-align: center;
       color: #00ffaa;
-      width: 200px;
+      width: 220px;
       transition: 0.3s;
     }
     .cert-item:hover {
@@ -89,14 +90,13 @@
       text-shadow: 0 0 15px #00ffaa;
     }
     .cert-gallery img {
-      width: 200px;
-      height: 140px;
-      object-fit: contain;
+      width: 220px;
+      height: 150px;
+      object-fit: cover;
       border: 1px solid #00ffaa;
       border-radius: 10px;
       cursor: pointer;
       transition: 0.3s;
-      background-color: #001a17;
       box-shadow: 0 0 10px #00ffaa50;
     }
     .cert-gallery img:hover {
@@ -134,10 +134,6 @@
       font-size: 40px;
       cursor: pointer;
     }
-    .close:hover {
-      color: #fff;
-      text-shadow: 0 0 20px #00ffaa;
-    }
   </style>
 </head>
 <body>
@@ -157,17 +153,17 @@
 <section>
   <h2>🎓 Сертификаты и обучение</h2>
   <div class="cert-gallery">
-    <div class="cert-item"><img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" onclick="openModal('certificates/cert1.pdf')"><div class="cert-title">Основы информационной безопасности</div></div>
-    <div class="cert-item"><img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" onclick="openModal('certificates/cert2.pdf')"><div class="cert-title">Сети передачи данных и безопасность</div></div>
-    <div class="cert-item"><img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" onclick="openModal('certificates/cert3.pdf')"><div class="cert-title">Git — система контроля версий</div></div>
-    <div class="cert-item"><img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" onclick="openModal('certificates/cert4.pdf')"><div class="cert-title">Безопасность операционных систем</div></div>
-    <div class="cert-item"><img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" onclick="openModal('certificates/cert5.pdf')"><div class="cert-title">Современная разработка ПО</div></div>
-    <div class="cert-item"><img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" onclick="openModal('certificates/cert6.pdf')"><div class="cert-title">Веб-приложения</div></div>
-    <div class="cert-item"><img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" onclick="openModal('certificates/cert7.pdf')"><div class="cert-title">Attack & Defence</div></div>
-    <div class="cert-item"><img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" onclick="openModal('certificates/cert8.pdf')"><div class="cert-title">Киберпреступность и противодействие</div></div>
-    <div class="cert-item"><img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" onclick="openModal('certificates/cert9.pdf')"><div class="cert-title">Реагирование на инциденты ИБ</div></div>
-    <div class="cert-item"><img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" onclick="openModal('certificates/cert10.pdf')"><div class="cert-title">Специалист по ИБ — расширенный курс</div></div>
-    <div class="cert-item"><img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" onclick="openModal('certificates/F6.pdf')"><div class="cert-title">Информационная безопасность (F6)</div></div>
+    <div class="cert-item"><img src="certificates/cert1.jpg" onclick="openModal('certificates/cert1.pdf')"><div class="cert-title">Основы информационной безопасности</div></div>
+    <div class="cert-item"><img src="certificates/cert2.jpg" onclick="openModal('certificates/cert2.pdf')"><div class="cert-title">Сети передачи данных и безопасность</div></div>
+    <div class="cert-item"><img src="certificates/cert3.jpg" onclick="openModal('certificates/cert3.pdf')"><div class="cert-title">Git — система контроля версий</div></div>
+    <div class="cert-item"><img src="certificates/cert4.jpg" onclick="openModal('certificates/cert4.pdf')"><div class="cert-title">Безопасность операционных систем</div></div>
+    <div class="cert-item"><img src="certificates/cert5.jpg" onclick="openModal('certificates/cert5.pdf')"><div class="cert-title">Современная разработка ПО</div></div>
+    <div class="cert-item"><img src="certificates/cert6.jpg" onclick="openModal('certificates/cert6.pdf')"><div class="cert-title">Веб-приложения</div></div>
+    <div class="cert-item"><img src="certificates/cert7.jpg" onclick="openModal('certificates/cert7.pdf')"><div class="cert-title">Attack & Defence</div></div>
+    <div class="cert-item"><img src="certificates/cert8.jpg" onclick="openModal('certificates/cert8.pdf')"><div class="cert-title">Киберпреступность и противодействие</div></div>
+    <div class="cert-item"><img src="certificates/cert9.jpg" onclick="openModal('certificates/cert9.pdf')"><div class="cert-title">Реагирование на инциденты ИБ</div></div>
+    <div class="cert-item"><img src="certificates/cert10.jpg" onclick="openModal('certificates/cert10.pdf')"><div class="cert-title">Специалист по ИБ — расширенный курс</div></div>
+    <div class="cert-item"><img src="certificates/F6.jpg" onclick="openModal('certificates/F6.pdf')"><div class="cert-title">Информационная безопасность (F6)</div></div>
   </div>
 
   <div id="modal" class="modal">
