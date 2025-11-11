@@ -38,7 +38,6 @@
       margin: 0 auto;
       padding: 20px;
       line-height: 1.6;
-      text-align: justify;
     }
     ul {
       list-style: none;
@@ -61,7 +60,6 @@
       margin: 10px;
       filter: drop-shadow(0 0 6px #00ffcc);
     }
-
     a {
       color: #00ffcc;
       text-decoration: none;
@@ -73,7 +71,7 @@
       text-shadow: 0 0 10px #00ffaa;
     }
 
-    /* --- Галереи сертификатов и дипломов --- */
+    /* Сертификаты и дипломы */
     .cert-gallery {
       display: flex;
       flex-wrap: wrap;
@@ -108,7 +106,7 @@
       font-size: 0.9em;
     }
 
-    /* --- Модалка для PDF/JPEG --- */
+    /* Модальное окно */
     .modal {
       display: none;
       position: fixed;
@@ -122,10 +120,11 @@
     .modal-content {
       margin: auto;
       display: block;
-      width: 90%;
-      height: 90%;
+      max-width: 80%;
+      max-height: 80%;
       border-radius: 10px;
       box-shadow: 0 0 25px #00ffaa;
+      object-fit: contain;
     }
     .close {
       position: absolute;
@@ -136,7 +135,7 @@
       cursor: pointer;
     }
 
-    /* --- Эффект наведения на проекты --- */
+    /* Эффект наведения на проекты */
     .project-item {
       padding: 10px;
       border-left: 3px solid transparent;
@@ -165,18 +164,18 @@
 
 <section id="about">
   <h2>Здравствуйте, меня зовут Дарья Клюхина</h2>
-  <p><strong>Я начинающий специалист по информационной безопасности</strong><br>
+  <p><strong>Я начинающий специалист по информационной безопасности.</strong><br>
   Интересуюсь <strong>DevSecOps</strong>, тестированием и безопасностью веб-приложений.</p>
 
-  <h3>🧭 Обо мне</h3>
+  <h3>Обо мне</h3>
   <p>Я закончила обучение по направлению <strong>Информационная безопасность</strong> в Нетологии. 
   Во время учёбы и дипломного проекта я изучила полный цикл защиты приложений — 
-  от сетевого уровня до DevSecOps-практик. Сейчас развиваюсь как специалист по 
-  <strong>функциональному тестированию</strong> и <strong>кибербезопасности</strong>.</p>
+  от сетевого уровня до DevSecOps-практик.<br>
+  Сейчас развиваюсь как начинающий специалист по <strong>функциональному тестированию</strong> и <strong>кибербезопасности</strong>.</p>
 
-  <h3>💼 Навыки и компетенции</h3>
+  <h3>Навыки и компетенции</h3>
 
-  <h4>🛡️ Информационная безопасность</h4>
+  <h4>Информационная безопасность</h4>
   <ul>
     <li>Аудит информационных систем и анализ уязвимостей</li>
     <li>Построение систем защиты информации</li>
@@ -186,42 +185,22 @@
     <li>Работа с нормативно-правовой базой (ФСТЭК, ФСБ, ЦБ РФ)</li>
   </ul>
 
-  <h4>⚙️ Технические навыки</h4>
+  <h4>Технические навыки</h4>
   <ul>
-    <li>ОС: Kali Linux, Ubuntu, Windows</li>
-    <li>Сетевые технологии, IDS/IPS</li>
+    <li>Работа с ОС: Kali Linux, Ubuntu, Windows</li>
+    <li>Сетевые технологии: настройка сетевого стека, IDS/IPS-системы</li>
     <li>Контейнеризация и CI/CD: Docker, GitHub Actions, DevSecOps</li>
-    <li>ЯП и скрипты: Python, Bash, PowerShell, SQL, JavaScript (базовый)</li>
-    <li>Инструменты: Trivy, Gitleaks, Bandit, OWASP ZAP, Sysinternals</li>
+    <li>Программирование: Python, Bash, PowerShell, SQL</li>
+    <li>Инструменты безопасности: Trivy, Gitleaks, Bandit, OWASP ZAP, Sysinternals, Nirsoft tools</li>
   </ul>
-</section>
-
-<section>
-  <h2>💻 Проекты</h2>
-  <div class="project-item">
-    <strong>Flaskr CI/CD DevSecOps</strong> — дипломный проект с интеграцией Trivy, Gitleaks, Bandit и OWASP ZAP<br>
-    <a href="https://github.com/KDarja/flaskr-ci-cd" target="_blank">🔗 Репозиторий проекта на GitHub</a>
-  </div>
-
-  <h2>📘 Учебные проекты</h2>
-  <div class="project-item"><a href="https://docs.google.com/document/d/13xlpuTkD2xUR1ge2N0qnNDnR0eusLGn7l6c7_OJChZs/edit?tab=t.0" target="_blank">Итоговая работа по модулю «Веб-приложения»</a></div>
-  <div class="project-item"><a href="https://docs.google.com/document/d/1UZO35AfIUSh5PCRBHUoyEctJlqC7aMAodldtV24NUi4/edit?tab=t.0" target="_blank">Пентест уязвимого приложения Google Gruyere (OWASP ZAP / Burp Suite)</a></div>
-  <div class="project-item"><a href="https://docs.google.com/document/d/1iNVIbPiJIFx82aPWl7uEQ_q-U8GPQSkYwcdzUfi3yeo/edit?tab=t.0" target="_blank">Тестирование на проникновение</a></div>
-  <div class="project-item"><a href="https://docs.google.com/document/d/1X5rqJMvuNFV1Ywz4Rl7_60vSzTbcFaOOyrsQdf85jy0/edit?tab=t.0" target="_blank">Мониторинг сетевых событий (Suricata)</a></div>
-  <div class="project-item"><a href="https://docs.google.com/document/d/1V9SRDjKd5-Z0n0gYsZ-uUOzKjkAiFW9ZSoch7QosAso/edit?tab=t.0" target="_blank">Диагностика Active Directory с помощью dcdiag</a></div>
-  <div class="project-item"><a href="https://docs.google.com/document/d/1ryEnn-8I69qZQ94mqv5eGgBStZZdLOVY_PRWCcz9Bec/edit?tab=t.0" target="_blank">OWASP Web. Часть 1</a></div>
-  <div class="project-item"><a href="https://docs.google.com/document/d/1crr9yhemYJXOaaPaOAQt5Oc_MEIYiDEQo7JQtAfPXcw/edit?tab=t.0" target="_blank">OWASP Web. Часть 2</a></div>
-  <div class="project-item"><a href="https://docs.google.com/document/d/1jPih6P-0sEJx6Y3dQUfVtfDReZ6tYvz4zPG0jscoKLM/edit?tab=t.0" target="_blank">Итоговая работа по модулю «Безопасность ОС и системное программирование»</a></div>
-  <div class="project-item"><a href="https://docs.google.com/document/d/1SA40ViZbg8AUDUah5juczCyeNPbZXw0lH4H83Bir7nM/edit?tab=t.0" target="_blank">Дипломная работа: DevSecOps-практики в CI/CD</a></div>
-  <div class="project-item"><a href="https://docs.google.com/document/d/1RN61yRW-QZdSrglxt6kzKAr1_xVlzghlWNmbz5UkdZQ/edit?tab=t.0" target="_blank">Контейнеризация (Docker)</a></div>
 </section>
 
 <section>
   <h2>📜 Образование</h2>
   <div class="cert-gallery">
-    <div class="cert-item"><img src="certificates/cert11.jpeg" onclick="openModal('certificates/cert11.jpg')"><div class="cert-title">Диплом о профессиональной переподготовке</div></div>
-    <div class="cert-item"><img src="certificates/cert12.jpeg" onclick="openModal('certificates/cert12.jpg')"><div class="cert-title">Приложение к диплому (1)</div></div>
-    <div class="cert-item"><img src="certificates/cert13.jpeg" onclick="openModal('certificates/cert13.jpg')"><div class="cert-title">Приложение к диплому (2)</div></div>
+    <div class="cert-item"><img src="certificates/cert11.jpeg" onclick="openModal('certificates/cert11.jpeg')"><div class="cert-title">Диплом о профессиональной переподготовке</div></div>
+    <div class="cert-item"><img src="certificates/cert12.jpeg" onclick="openModal('certificates/cert12.jpeg')"><div class="cert-title">Приложение к диплому — часть 1</div></div>
+    <div class="cert-item"><img src="certificates/cert13.jpeg" onclick="openModal('certificates/cert13.jpeg')"><div class="cert-title">Приложение к диплому — часть 2</div></div>
   </div>
 </section>
 
@@ -244,15 +223,14 @@
 
 <div id="modal" class="modal">
   <span class="close" onclick="closeModal()">&times;</span>
-  <iframe class="modal-content" id="pdfViewer"></iframe>
+  <img class="modal-content" id="pdfViewer">
 </div>
 
 <section>
-  <h2>📞 Контакты</h2>
+  <h2>Контакты</h2>
   <p>📧 Email: <a href="mailto:darja-klukhina@mail.ru">darja-klukhina@mail.ru</a><br>
      💼 GitHub: <a href="https://github.com/KDarja" target="_blank">github.com/KDarja</a><br>
-     🌐 Портфолио: <a href="https://kdarja.github.io" target="_blank">kdarja.github.io</a><br>
-     📍 Город: Петрозаводск / Удалённо</p>
+     📍 Город: Петрозаводск / удалённо</p>
 </section>
 
 <footer>
