@@ -60,6 +60,7 @@
       margin: 10px;
       filter: drop-shadow(0 0 6px #00ffcc);
     }
+
     a {
       color: #00ffcc;
       text-decoration: none;
@@ -71,7 +72,7 @@
       text-shadow: 0 0 10px #00ffaa;
     }
 
-    /* Сертификаты и дипломы */
+    /* --- Сертификаты и дипломы --- */
     .cert-gallery {
       display: flex;
       flex-wrap: wrap;
@@ -106,7 +107,7 @@
       font-size: 0.9em;
     }
 
-    /* Модальное окно */
+    /* --- Модалка PDF/JPG --- */
     .modal {
       display: none;
       position: fixed;
@@ -120,11 +121,10 @@
     .modal-content {
       margin: auto;
       display: block;
-      max-width: 80%;
-      max-height: 80%;
+      width: 90%;
+      height: 90%;
       border-radius: 10px;
       box-shadow: 0 0 25px #00ffaa;
-      object-fit: contain;
     }
     .close {
       position: absolute;
@@ -135,7 +135,7 @@
       cursor: pointer;
     }
 
-    /* Эффект наведения на проекты */
+    /* --- Эффект наведения на проекты --- */
     .project-item {
       padding: 10px;
       border-left: 3px solid transparent;
@@ -162,20 +162,17 @@
   </div>
 </header>
 
-<section id="about">
-  <h2>Здравствуйте, меня зовут Дарья Клюхина</h2>
-  <p><strong>Я начинающий специалист по информационной безопасности.</strong><br>
+<section>
+  <h2>Здравствуйте, я Дарья Клюхина</h2>
+  <p><strong>Специалист по информационной безопасности</strong><br>
   Интересуюсь <strong>DevSecOps</strong>, тестированием и безопасностью веб-приложений.</p>
 
   <h3>Обо мне</h3>
-  <p>Я закончила обучение по направлению <strong>Информационная безопасность</strong> в Нетологии. 
-  Во время учёбы и дипломного проекта я изучила полный цикл защиты приложений — 
-  от сетевого уровня до DevSecOps-практик.<br>
-  Сейчас развиваюсь как начинающий специалист по <strong>функциональному тестированию</strong> и <strong>кибербезопасности</strong>.</p>
+  <p>Закончила обучение по направлению <strong>Информационная безопасность</strong> в Нетологии.
+  Во время учёбы и дипломного проекта изучила полный цикл защиты приложений — от сетевого уровня до DevSecOps-практик.
+  Сейчас развиваюсь как начинающий специалист по функциональному тестированию и кибербезопасности.</p>
 
   <h3>Навыки и компетенции</h3>
-
-  <h4>Информационная безопасность</h4>
   <ul>
     <li>Аудит информационных систем и анализ уязвимостей</li>
     <li>Построение систем защиты информации</li>
@@ -185,51 +182,58 @@
     <li>Работа с нормативно-правовой базой (ФСТЭК, ФСБ, ЦБ РФ)</li>
   </ul>
 
-  <h4>Технические навыки</h4>
+  <h3>Технические навыки</h3>
   <ul>
     <li>Работа с ОС: Kali Linux, Ubuntu, Windows</li>
     <li>Сетевые технологии: настройка сетевого стека, IDS/IPS-системы</li>
     <li>Контейнеризация и CI/CD: Docker, GitHub Actions, DevSecOps</li>
-    <li>Программирование: Python, Bash, PowerShell, SQL</li>
-    <li>Инструменты безопасности: Trivy, Gitleaks, Bandit, OWASP ZAP, Sysinternals, Nirsoft tools</li>
+    <li>Программирование: Python, Bash, PowerShell, SQL, JavaScript</li>
+    <li>Инструменты безопасности: Trivy, Gitleaks, Bandit, OWASP ZAP, Sysinternals</li>
   </ul>
-</section>
 
-<section>
+  <h2>Проекты</h2>
+  <div class="project-item">
+    <strong>Flaskr CI/CD DevSecOps</strong> — дипломный проект с интеграцией Trivy, Gitleaks, Bandit и OWASP ZAP<br>
+    <a href="https://github.com/KDarja/flaskr-ci-cd" target="_blank">🔗 Репозиторий проекта на GitHub</a>
+  </div>
+
+  <h2>Учебные проекты</h2>
+  <div class="project-item"><a href="https://docs.google.com/document/d/13xlpuTkD2xUR1ge2N0qnNDnR0eusLGn7l6c7_OJChZs/edit?tab=t.0" target="_blank">Итоговая работа по модулю «Веб-приложения»</a></div>
+  <div class="project-item"><a href="https://docs.google.com/document/d/1UZO35AfIUSh5PCRBHUoyEctJlqC7aMAodldtV24NUi4/edit?tab=t.0" target="_blank">Пентест уязвимого приложения Google Gruyere (OWASP ZAP / Burp Suite)</a></div>
+  <div class="project-item"><a href="https://docs.google.com/document/d/1iNVIbPiJIFx82aPWl7uEQ_q-U8GPQSkYwcdzUfi3yeo/edit?tab=t.0" target="_blank">Тестирование на проникновение</a></div>
+  <div class="project-item"><a href="https://docs.google.com/document/d/1SA40ViZbg8AUDUah5juczCyeNPbZXw0lH4H83Bir7nM/edit?tab=t.0" target="_blank">Дипломная работа: DevSecOps-практики в CI/CD</a></div>
+
+  <h2>🎓 Сертификаты</h2>
+  <div class="cert-gallery">
+    <div class="cert-item"><img src="certificates/cert1.jpg" onclick="openModal('certificates/cert1.jpg')"><div class="cert-title">Основы информационной безопасности</div></div>
+    <div class="cert-item"><img src="certificates/cert2.jpg" onclick="openModal('certificates/cert2.jpg')"><div class="cert-title">Сети передачи данных и безопасность</div></div>
+    <div class="cert-item"><img src="certificates/cert3.jpg" onclick="openModal('certificates/cert3.jpg')"><div class="cert-title">Git — система контроля версий</div></div>
+    <div class="cert-item"><img src="certificates/cert4.jpg" onclick="openModal('certificates/cert4.jpg')"><div class="cert-title">Безопасность операционных систем</div></div>
+    <div class="cert-item"><img src="certificates/cert5.jpg" onclick="openModal('certificates/cert5.jpg')"><div class="cert-title">Современная разработка ПО</div></div>
+    <div class="cert-item"><img src="certificates/cert6.jpg" onclick="openModal('certificates/cert6.jpg')"><div class="cert-title">Веб-приложения</div></div>
+    <div class="cert-item"><img src="certificates/cert7.jpg" onclick="openModal('certificates/cert7.jpg')"><div class="cert-title">Attack & Defence</div></div>
+    <div class="cert-item"><img src="certificates/cert8.jpg" onclick="openModal('certificates/cert8.jpg')"><div class="cert-title">Киберпреступность и противодействие</div></div>
+    <div class="cert-item"><img src="certificates/cert9.jpg" onclick="openModal('certificates/cert9.jpg')"><div class="cert-title">Реагирование на инциденты ИБ</div></div>
+    <div class="cert-item"><img src="certificates/cert10.jpg" onclick="openModal('certificates/cert10.jpg')"><div class="cert-title">Специалист по ИБ — расширенный курс</div></div>
+    <div class="cert-item"><img src="certificates/F6.jpg" onclick="openModal('certificates/F6.jpg')"><div class="cert-title">Информационная безопасность (F6)</div></div>
+  </div>
+
   <h2>📜 Образование</h2>
   <div class="cert-gallery">
     <div class="cert-item"><img src="certificates/cert11.jpg" onclick="openModal('certificates/cert11.jpg')"><div class="cert-title">Диплом о профессиональной переподготовке</div></div>
     <div class="cert-item"><img src="certificates/cert12.jpg" onclick="openModal('certificates/cert12.jpg')"><div class="cert-title">Приложение к диплому — часть 1</div></div>
     <div class="cert-item"><img src="certificates/cert13.jpg" onclick="openModal('certificates/cert13.jpg')"><div class="cert-title">Приложение к диплому — часть 2</div></div>
   </div>
-</section>
 
-<section>
-  <h2>🎓 Сертификаты и обучение</h2>
-  <div class="cert-gallery">
-    <div class="cert-item"><img src="certificates/cert1.jpg" onclick="openModal('certificates/cert1.pdf')"><div class="cert-title">Основы информационной безопасности</div></div>
-    <div class="cert-item"><img src="certificates/cert2.jpg" onclick="openModal('certificates/cert2.pdf')"><div class="cert-title">Сети передачи данных и безопасность</div></div>
-    <div class="cert-item"><img src="certificates/cert3.jpg" onclick="openModal('certificates/cert3.pdf')"><div class="cert-title">Git — система контроля версий</div></div>
-    <div class="cert-item"><img src="certificates/cert4.jpg" onclick="openModal('certificates/cert4.pdf')"><div class="cert-title">Безопасность операционных систем</div></div>
-    <div class="cert-item"><img src="certificates/cert5.jpg" onclick="openModal('certificates/cert5.pdf')"><div class="cert-title">Современная разработка ПО</div></div>
-    <div class="cert-item"><img src="certificates/cert6.jpg" onclick="openModal('certificates/cert6.pdf')"><div class="cert-title">Веб-приложения</div></div>
-    <div class="cert-item"><img src="certificates/cert7.jpg" onclick="openModal('certificates/cert7.pdf')"><div class="cert-title">Attack & Defence</div></div>
-    <div class="cert-item"><img src="certificates/cert8.jpg" onclick="openModal('certificates/cert8.pdf')"><div class="cert-title">Киберпреступность и противодействие</div></div>
-    <div class="cert-item"><img src="certificates/cert9.jpg" onclick="openModal('certificates/cert9.pdf')"><div class="cert-title">Реагирование на инциденты ИБ</div></div>
-    <div class="cert-item"><img src="certificates/cert10.jpg" onclick="openModal('certificates/cert10.pdf')"><div class="cert-title">Специалист по ИБ — расширенный курс</div></div>
-    <div class="cert-item"><img src="certificates/F6.jpg" onclick="openModal('certificates/F6.pdf')"><div class="cert-title">Информационная безопасность (F6)</div></div>
+  <div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImg">
   </div>
-</section>
 
-<div id="modal" class="modal">
-  <span class="close" onclick="closeModal()">&times;</span>
-  <img class="modal-content" id="pdfViewer">
-</div>
-
-<section>
   <h2>Контакты</h2>
   <p>📧 Email: <a href="mailto:darja-klukhina@mail.ru">darja-klukhina@mail.ru</a><br>
      💼 GitHub: <a href="https://github.com/KDarja" target="_blank">github.com/KDarja</a><br>
+     🌐 Портфолио: <a href="https://kdarja.github.io" target="_blank">kdarja.github.io</a><br>
      📍 Город: Петрозаводск / удалённо</p>
 </section>
 
@@ -240,14 +244,13 @@
 <script>
 function openModal(path) {
   const modal = document.getElementById("modal");
-  const viewer = document.getElementById("pdfViewer");
+  const img = document.getElementById("modalImg");
   modal.style.display = "block";
-  viewer.src = path;
+  img.src = path;
 }
 function closeModal() {
-  const modal = document.getElementById("modal");
-  modal.style.display = "none";
-  document.getElementById("pdfViewer").src = "";
+  document.getElementById("modal").style.display = "none";
+  document.getElementById("modalImg").src = "";
 }
 </script>
 
